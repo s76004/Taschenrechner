@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.control.*;
 
@@ -17,7 +16,7 @@ public class Main extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("tf.fxml"));
             //GridPane root = new GridPane();
-            Scene scene = new Scene(root,500,500);
+            Scene scene = new Scene(root, 500, 500);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.setTitle("Taschenrechner");
@@ -28,16 +27,16 @@ public class Main extends Application {
             //root.addRow(0, hb);
 
 
-            for(int i = 1; i<10; i++) {
+            for (int i = 1; i < 10; i++) {
                 String buttonname = String.valueOf(i);
-                Button button = new Button (buttonname);
+                Button button = new Button(buttonname);
                 double wh = 100.0;
                 button.setMaxWidth(wh);
                 button.setMaxHeight(wh);
                 button.setMinWidth(wh);
                 button.setMinHeight(wh);
-                int col = (i-1) % 3;
-                int row = 4 - ((i-1) / 3);
+                int col = (i - 1) % 3;
+                int row = 4 - ((i - 1) / 3);
                 //root.add(button, col, row);
             }
             Button plus = new Button("+");
@@ -83,7 +82,7 @@ public class Main extends Application {
             root.add(gleich, 4, 6);
 */
             primaryStage.show();
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -92,6 +91,10 @@ public class Main extends Application {
         launch(args);
     }
 
+    /**
+     * Method to handle addition.
+     * @param event the event triggering the method
+     */
     @FXML
     void addition(ActionEvent event) {
         System.out.print("tada!");
