@@ -1,6 +1,8 @@
 package application;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
@@ -89,4 +91,10 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
+    @FXML
+    void addition(ActionEvent event) {
+        System.out.print("tada!");
+    }
+
 }
