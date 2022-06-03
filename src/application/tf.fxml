@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Tr">
 	<columnConstraints>
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -24,37 +24,37 @@
 	<children>
 		<AnchorPane GridPane.rowIndex="4">
 			<children>
-				<Button mnemonicParsing="false" text="1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#buttonOne" text="1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="4">
 			<children>
-				<Button mnemonicParsing="false" text="2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#buttonTwo" text="2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="4">
 			<children>
-				<Button mnemonicParsing="false" text="3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#buttonThree" text="3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.columnIndex="3" GridPane.rowIndex="4">
 			<children>
-				<Button mnemonicParsing="false" text="0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#buttonZero" text="0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.rowIndex="3">
 			<children>
-				<Button mnemonicParsing="false" text="4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#buttonFour" text="4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="3">
 			<children>
-				<Button mnemonicParsing="false" text="5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#buttonFive" text="5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="3">
 			<children>
-				<Button mnemonicParsing="false" text="6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#buttonSix" text="6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.columnIndex="3" GridPane.rowIndex="3">
@@ -64,22 +64,22 @@
 		</AnchorPane>
 		<AnchorPane GridPane.rowIndex="2">
 			<children>
-				<Button mnemonicParsing="false" text="7" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#buttonSeven" text="7" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
 			<children>
-				<Button mnemonicParsing="false" text="8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#buttonEight" text="8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="2">
 			<children>
-				<Button mnemonicParsing="false" text="9" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#buttonNine" text="9" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.columnIndex="3" GridPane.rowIndex="2">
 			<children>
-				<Button mnemonicParsing="false" text="=" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+				<Button mnemonicParsing="false" onAction="#calculate" text="=" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 			</children>
 		</AnchorPane>
 		<AnchorPane GridPane.rowIndex="1">
@@ -103,5 +103,6 @@
 			</children>
 		</AnchorPane>
 		<TextField prefHeight="85.0" prefWidth="600.0" GridPane.columnSpan="4" />
+      <TextField fx:id="displaytf" prefHeight="98.0" prefWidth="600.0" GridPane.columnSpan="4" />
 	</children>
 </GridPane>
