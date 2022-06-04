@@ -1,3 +1,16 @@
+/**
+ * filename: Tr.java
+ * description: Class for the Controller-Functions of the calculator.
+ * FXML file is used as view where scene, stage, grid and buttons are placed in.
+ * The FXML file can be used with the jave scene builder.
+ * 
+ * @author Kevin Kurt (s76004@beuth-hochschule.de)
+ * @author Jan Zimmermann (s79873@beuth-hochschule.de)
+ * @author Alexander Mavrin (s53615@beuth-hochschule.de)
+ * @version 1.0.0
+ *
+ */
+
 package controller;
 
 import javafx.fxml.FXML;
@@ -12,10 +25,16 @@ public class Tr {
     @FXML 
     private TextField displaytf = new TextField();
 
+/**
+ * 
+ * @param input String-Variable with which the content will be added to the Display-String.
+ */
     private void append(String input) {
         displayString.append(input);
     }
-
+/**
+ * Knöpfe, welche beim KLicken jeweils Ihre Ziffer an den Display-String anhängen. 
+ */
     public void buttonOne() {
         append("1");
         display();
@@ -62,7 +81,9 @@ public class Tr {
         append("+");
         display();
     }
-
+/**
+ * Calculate-Function, which takes the string, splits it and then performs the operation on subsets.
+ */
     @FXML
     public void calculate() {
         // Integer to hold the calculation result
