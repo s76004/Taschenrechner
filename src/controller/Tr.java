@@ -7,13 +7,13 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 public class Tr {
-    StringBuilder str = new StringBuilder();
+    StringBuilder displayString = new StringBuilder();
 
     @FXML 
     private TextField displaytf = new TextField();
 
     private void append(String input) {
-        str.append(input);
+        displayString.append(input);
     }
 
     public void buttonOne() {
@@ -69,7 +69,7 @@ public class Tr {
         int result = 0;
 
         // Splitting the String holding all of the operation into an array of Strings
-        String[] split = str.toString().split("\\+");
+        String[] split = displayString.toString().split("\\+");
 
         // Initializing a new Integer ArrayList to hold the numbers
         ArrayList<Integer> numbers = new ArrayList<Integer>();
@@ -82,17 +82,25 @@ public class Tr {
             result += value;
         }
         // Clear the StringBuilder
-        str.setLength(0);
+        displayString.setLength(0);
         // Initialize the StringBuilder with the current result and refresh the display
-        str.append(result);
+        displayString.append(result);
         display();
     }
-    
+
+    /**
+     * Method to refresh the content displayed in the calculator.
+     */
     @FXML
     public void display() {
-        displaytf.setText(str.toString());
+        // Setting the current text of the displayString
+        displaytf.setText(displayString.toString());
+
+        // Retrieving the Scene and Stage objects from the field
         Scene scene = displaytf.getScene();
         Stage stage = (Stage) displaytf.getScene().getWindow();
+
+        // Refreshing what is displayed towards the user
         stage.setScene(scene);
     }
 }
