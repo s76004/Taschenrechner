@@ -1,9 +1,10 @@
 package controller;
 
-import javafx.scene.Scene;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import java.util.ArrayList;
 
 public class Tr {
     StringBuilder str = new StringBuilder();
@@ -64,19 +65,29 @@ public class Tr {
 
     @FXML
     public void calculate() {
+        // Integer to hold the calculation result
         int result = 0;
-        String[] s = str.toString().split("\\+");
-        int[] i = new int[s.length];
-        for (int j = 0; j < s.length; j++) {
-            i[j] = Integer.parseInt(s[j]); 
-            for (int value : i) {
-                result += value;
-            }
-            str.setLength(0);
-            str.append(result);
-            display();
+
+        // Splitting the String holding all of the operation into an array of Strings
+        String[] split = str.toString().split("\\+");
+
+        // Initializing a new Integer ArrayList to hold the numbers
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        // Adding all numbers to the new ArrayList
+        for (String s : split) {
+            numbers.add(Integer.parseInt(s));
         }
+        // Adding all of the values
+        for (int value : numbers) {
+            result += value;
+        }
+        // Clear the StringBuilder
+        str.setLength(0);
+        // Initialize the StringBuilder with the current result and refresh the display
+        str.append(result);
+        display();
     }
+    
     @FXML
     public void display() {
         displaytf.setText(str.toString());
